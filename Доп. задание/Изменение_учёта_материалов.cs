@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Доп.задание
 {
-    public partial class Form1 : Form
+    public partial class Изменение_учёта_материалов : Form
     {
-        public Form1()
+        public Изменение_учёта_материалов()
         {
             InitializeComponent();
         }

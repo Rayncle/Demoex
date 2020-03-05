@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +55,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Model1.cs" />
+    <Compile Include="Авторизация.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Заказ.cs" />
+    <Compile Include="Заказы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Заказы.Designer.cs">
+      <DependentUpon>Заказы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изделие.cs" />
+    <Compile Include="Изменение_учёта_комплектующих.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение_учёта_комплектующих.Designer.cs">
+      <DependentUpon>Изменение_учёта_комплектующих.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение_учёта_материалов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение_учёта_материалов.Designer.cs">
+      <DependentUpon>Изменение_учёта_материалов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Комплектующий.cs" />
+    <Compile Include="Материал.cs" />
+    <Compile Include="Оборудование.cs" />
+    <Compile Include="Пользователь.cs" />
+    <Compile Include="Поставщик.cs" />
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Сотрудники.cs" />
+    <Compile Include="Спецификация_комплектующих.cs" />
+    <Compile Include="Спецификация_материалов.cs" />
+    <Compile Include="Спецификация_операции.cs" />
+    <Compile Include="Спецификация_сборочных_единиц.cs" />
+    <Compile Include="Список_комплектующих%28закрытый%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_комплектующих%28закрытый%29.Designer.cs">
+      <DependentUpon>Список_комплектующих%28закрытый%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список_комплектующих.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_комплектующих.Designer.cs">
+      <DependentUpon>Список_комплектующих.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список_материалов%28закрытый%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_материалов%28закрытый%29.Designer.cs">
+      <DependentUpon>Список_материалов%28закрытый%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список_материалов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_материалов.Designer.cs">
+      <DependentUpon>Список_материалов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список_сотрудников.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_сотрудников.Designer.cs">
+      <DependentUpon>Список_сотрудников.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Тип_оборудования.cs" />
+    <Compile Include="Форма_директора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Форма_директора.Designer.cs">
+      <DependentUpon>Форма_директора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Форма_заказчика.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Форма_заказчика.Designer.cs">
+      <DependentUpon>Форма_заказчика.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Форма_конструктора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Форма_конструктора.Designer.cs">
+      <DependentUpon>Форма_конструктора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Форма_мастера.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Форма_мастера.Designer.cs">
+      <DependentUpon>Форма_мастера.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Форма_менеджера.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Форма_менеджера.Designer.cs">
+      <DependentUpon>Форма_менеджера.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +173,47 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Заказы.resx">
+      <DependentUpon>Заказы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_комплектующих%28закрытый%29.resx">
+      <DependentUpon>Список_комплектующих%28закрытый%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_комплектующих.resx">
+      <DependentUpon>Список_комплектующих.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_материалов%28закрытый%29.resx">
+      <DependentUpon>Список_материалов%28закрытый%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_материалов.resx">
+      <DependentUpon>Список_материалов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_сотрудников.resx">
+      <DependentUpon>Список_сотрудников.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Форма_директора.resx">
+      <DependentUpon>Форма_директора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Форма_заказчика.resx">
+      <DependentUpon>Форма_заказчика.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Форма_конструктора.resx">
+      <DependentUpon>Форма_конструктора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Форма_мастера.resx">
+      <DependentUpon>Форма_мастера.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Форма_менеджера.resx">
+      <DependentUpon>Форма_менеджера.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Заказ.datasource" />
+    <None Include="Properties\DataSources\Комплектующий.datasource" />
+    <None Include="Properties\DataSources\Материал.datasource" />
+    <None Include="Properties\DataSources\Сотрудники.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
