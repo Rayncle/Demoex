@@ -12,6 +12,7 @@ namespace Доп.задание
 {
     public partial class Форма_заказчика : Form
     {
+        Model1 db = new Model1();
         public Форма_заказчика()
         {
             InitializeComponent();
@@ -22,6 +23,12 @@ namespace Доп.задание
             Form vh = new Авторизация();
             vh.Visible = true;
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form zak = new Заказы();
+            zak.Visible = true;
         }
     }
 }
